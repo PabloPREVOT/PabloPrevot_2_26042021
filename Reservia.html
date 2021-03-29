@@ -13,26 +13,25 @@
         <div id="bloc_page">
             <header>
                 
-                <div id="bloc_logo_nav">
-                    <p><img src="images/logo/Reservia@3x.png" alt="logo Reservia" id="logo"></p>
-                    <div id="bloc_nav_inscription">   
-                        <nav>
-                            <a href="#section_hebergements" class="main_nav">Hébergements</a>
-                            <a href="#section_activites" class="main_nav">Activités</a>
-                        </nav>
-                        <a href="#" id="inscription">S'incrire</a>
-                    </div>
+                <p><img src="images/logo/Reservia@3x.png" alt="logo Reservia" id="logo"></p>
+                
+                <div id="bloc_nav_inscription">   
+                    <nav>
+                        <a href="#section_hebergements" class="main_nav">Hébergements</a>
+                        <a href="#section_activites" class="main_nav">Activités</a>
+                    </nav>
+                    <a href="#" id="inscription">S'incrire</a>
                 </div>
 
             </header>
 
-            <div> <!--Champ de recherche et filtre-->
+            <div id="section"> <!--Champ de recherche et filtre-->
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 
                 <p>En plein centre ville ou en pleine nature</p>
 
                 <form method="POST" action="" id="bloc_recherche">
-                        <i class="fas fa-map-marker-alt" id="icone_localisation"></i><input type="search" id="champ_recherche"/><input type="submit" value="Rechercher" id="bouton_rechercher"/> 
+                        <i class="fas fa-map-marker-alt" id="icone_localisation"></i><input type="search" id="champ_recherche"/><input type="submit" value="Rechercher" id="bouton_rechercher"/><i class="fas fa-search" id="loupe_img"></i>
                 </form>
 
                 <div id="bloc_filtre">
@@ -41,7 +40,7 @@
                         <div><i class="fas fa-money-bill-wave filtre_icone" id="filtre_icone_billet"></i><a href="#">Economique</a></div>
                         <div><i class="fas fa-child filtre_icone" id="filtre_icone_familial"></i><a href="#">Familial</a></div>
                         <div><i class="fas fa-heart filtre_icone"></i><a href="#">Romantique</a></div>
-                        <div><i class="fas fa-dog filtre_icone"></i><a href="#">Animaux autorisés</a></div>
+                        <div id="animaux"><i class="fas fa-dog filtre_icone"></i><a href="#">Animaux autorisés</a></div>
                     </div>
                 </div>
                 <div id="info_logement">
@@ -67,7 +66,7 @@
                                 </figure>
                             </a>
                         </div>
-                        <div>
+                        <div class="shadow">
                             <a href="#">
                                 <figure class="figure_hebergement">
                                     <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hôtel du port" class="img_bloc_hebergement all_img"/>
@@ -79,7 +78,7 @@
                                 </figure>
                             </a>
                         </div>
-                        <div>
+                        <div class="shadow">
                             <a href="#">
                                 <figure class="figure_hebergement">
                                     <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les mouettes" class="img_bloc_hebergement all_img"/>
@@ -91,7 +90,7 @@
                                 </figure>
                             </a>
                         </div>
-                        <div>
+                        <div class="shadow">
                             <a href="#">
                                 <figure class="figure_hebergement">
                                     <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hôtel de la mer" class="img_bloc_hebergement all_img"/>
@@ -103,7 +102,7 @@
                                 </figure>
                             </a>
                         </div>
-                        <div>
+                        <div class="shadow">
                             <a href="#">
                                 <figure class="figure_hebergement">                        
                                     <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge Le panier" class="img_bloc_hebergement all_img"/>
@@ -115,7 +114,7 @@
                                 </figure>
                             </a>
                         </div>
-                        <div>
+                        <div class="shadow">
                             <a href="#">
                                 <figure class="figure_hebergement">
                                     <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel chez Amina" class="img_bloc_hebergement all_img"/>
@@ -187,19 +186,19 @@
 
                 <h2>Activités a Marseille</h2>
                 <div id="bloc_activites_img">
-                    <div class="figure_activites shadow width_bloc">
+                    <div class="figure_activites shadow width_bloc" id="bloc_1_activites">
                         <a href="#">
                             <figure>
-                                    <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux port" class="img_activites_solo all_img"/>
+                                    <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux port" class="img_activites_solo all_img all_img_activites"/>
                                     <figcaption class="bloc_legende_activites"><h3>Vieux Port</h3></figcaption>
                             </figure>
                         </a>
                     </div>
-                    <div class="bloc_duo width_bloc">
+                    <div class="bloc_duo width_bloc" id="bloc_2_activites">
                         <div class="figure_activites shadow img_up_duo">
                             <a href="#">
                                 <figure class="figure_activites">
-                                    <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" class="all_img" id="pomegues"/>
+                                    <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" class="all_img all_img_activites" id="pomegues"/>
                                     <figcaption class="bloc_legende_activites"><h3>Fort de Pomègues</h3></figcaption>
                                 </figure>
                             </a>
@@ -207,25 +206,25 @@
                         <div class="figure_activites shadow">
                             <a href="#">
                                 <figure class="figure_activites">
-                                    <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="ïles du Frioul" class="all_img" id="frioul"/>
+                                    <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="ïles du Frioul" class="all_img all_img_activites" id="frioul"/>
                                     <figcaption class="bloc_legende_activites"><h3>Îles du Frioul</h3></figcaption>
                                 </figure>
                             </a>
                         </div>
                     </div>
-                    <div class="figure_activites shadow width_bloc">
+                    <div class="figure_activites shadow width_bloc" id="bloc_3_activites">
                         <a href="#">
                             <figure>
-                                <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" class="img_activites_solo all_img"/>
+                                <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" class="img_activites_solo all_img all_img_activites"/>
                                 <figcaption class="bloc_legende_activites"><h3>Parc National des Calanques</h3></figcaption>
                             </figure>
                         </a>
                     </div> 
-                    <div class="bloc_duo width_bloc">
+                    <div class="bloc_duo width_bloc" id="bloc_4_activites">
                         <div class="figure_activites shadow img_up_duo">
                             <a href="#">
                                 <figure class="figure_activites">
-                                    <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" class="all_img" id="garde"/>
+                                    <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" class="all_img all_img_activites" id="garde"/>
                                     <figcaption class="bloc_legende_activites"><h3>Notre-Dame-de-la-Garde</h3></figcaption>
                                 </figure>
                             </a>
@@ -233,7 +232,7 @@
                         <div class="figure_activites shadow">
                             <a href="#">
                                 <figure class="figure_activites">
-                                    <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" class="all_img" id="longchamp"/>
+                                    <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" class="all_img all_img_activites" id="longchamp"/>
                                     <figcaption class="bloc_legende_activites"><h3>Parc Longchamp</h3></figcaption>
                                 </figure>
                             </a>
