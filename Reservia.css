@@ -50,12 +50,18 @@ header
 #bloc_nav_inscription
 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+}
+
+header li
+{
+    list-style: none;
 }
 
 header ul
 {
+    display: flex;
     padding: 0;
 }
 
@@ -176,6 +182,12 @@ h1
     margin: 10px 25px 0 0;
     border: 2px solid #F2F2F2;
     border-radius: 20px;
+}
+
+#navigation_filtre a:hover
+{
+    opacity: 0.5;
+    color: #0065FC;
 }
 
 .filtre_icone
@@ -301,7 +313,7 @@ figure
 #afficher_plus
 {
     font-weight: bold;
-    margin: 15px 0 25px 25px;;
+    margin: 15px 0 25px 25px;
 }
 
 /*--------------------------------------*/
@@ -586,10 +598,41 @@ footer
 
 @media all and (max-width: 642px)/*-----------------------------*/
 {
+    /*Nav position absolue a 642px*/
+    header
+    {
+        position: relative;/*ajouté*/
+        margin-bottom: 80px;/*ajouté*/
+    }
+    header nav
+    {
+        position: absolute;/*ajouté*/
+        top: 40px;/*ajouté*/
+        left: -40px;/*ajouté*/
+        width: 642px;/*ajouté*/
+    }
+    header li
+    {
+        width: 320px;/*ajouté*/
+        text-align: center;/*ajouté*/
+    }
+    .main_nav
+    {
+        margin: 0;/*modifié margin-right 15px -> 0*/
+        padding: 0 135px 25px 135px;/*modifié 25px 25px 0 20px -> 0 135px 25px 135px*/
+    }
+    .main_nav:hover
+    {
+        color: #0065FC;
+        border-top: none;
+        border-bottom: solid 2px #0065FC;
+    }
     /*-----------------------------------------------*/
-    /*Div*/
 
-    #section
+    /*-----------------------------------------------*/
+    /*Section Recherche Filtres*/
+
+    #recherche_filtres
     {
         margin-top: 30px;
     }
@@ -599,7 +642,7 @@ footer
 
     #bloc_populaires_img
     {
-        flex-wrap: wrap;/*ajouté*/
+        flex-wrap: wrap;/*ajoute*/
     }
 
     .figure_populaires
@@ -618,71 +661,198 @@ footer
 
 @media all and (max-width: 500px)
 {
-    /*------------------------------------------------*/
-    /*Aside populaires*/
+    /*Nav position absolue a 500px*/
 
-    #aside_populaires
+    header nav
     {
-        background-color: #F2F2F2;
-        border-radius: 10px;
+        left: -20px;/*modifié -40px -> -20px*/
+        width: 500px;/*modifié 642px -> 500px*/
+    }
+    header li
+    {
+        width: 250px;/*modifié 321px -> 250px*/
+    }
+    .main_nav
+    {
+        padding: 0 100px 25px 100px;/*modifié 0 135px 25px 135px -> 0 100px 25px 100px*/
+    }
+
+    /*--------------------------------------------------*/
+
+    /*Modification des marges en vu de la version mobile*/
+
+    #bloc_page
+    {
+        margin: 0;
+    }
+
+    header
+    {
+        margin: 10px 20px 80px 20px;
+    }
+
+    #recherche_filtres
+    {
+        margin: 30px 20px 0 20px;
+    }
+
+    #aside_populaires, #section_hebergements
+    {
         margin-top: 20px;
-        width: 100%;
-        order: -1;
     }
 
-    #bloc_title_populaires_img
+    #flex_section-aside
     {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        margin: 0;
     }
 
-    #bloc_title_populaires_img i
+    #section_activites
     {
-        margin: 30px 20px 10px 0;
+        margin: 30px 10px 50px 10px;/*ajouté marge gauche et droite 10px*/
     }
 
-    #bloc_populaires_img
+    #flex_section-aside h2
     {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+        margin: 30px 0 10px 10px;/*modifié marge gauche 25px -> 10px*/
     }
 
-    .figure_populaires
+    #afficher_plus
     {
-        background-color: white;
-        margin: 10px;
-        padding: 5px;
-        border-radius: 10px;
-        width: 42%;
-        height: 30%;
+        margin: 15px 0 25px 10px;/*modifié marge gauche 25px -> 10px*/
     }
 
-    .flex_img_figcaption_populaires
+    /*---------------------------------------------------*/
+    /*Footer*/
+
+    footer
     {
-        display: flex;
+        justify-content: space-around;/*modifié flex-start -> space around*/
     }
 
-    .img_bloc_populaires
-    {
-        width: 35%;
-        height: 115px;
-        border-radius: 10px 0 0 10px;
-    }
-
-    .bloc_legende_populaires
+    .nav_footer
     {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding: 5px 10px;
+        width: auto;/*modifié 35% -> auto*/
+        margin-left: 0px;/*modifié 50px -> 0px*/
+    }
+}
+
+@media all and (max-width: 376px)
+{
+    /*Nav position absolue a 375px*/
+
+    header nav
+    {
+        width: 375px;/*modifié 500px -> 375px*/
+    }
+    header li
+    {
+        width: 187.5px;/*modifié 250px -> 187.5px*/
+    }
+    .main_nav
+    {
+        padding: 0 70px 25px 70px;/*modifié 0 100px 25px 100px -> 0 70px 25px 70px*/
     }
 
-    .bloc_legende_populaires h3, .bloc_legende_populaires p
+    /*---------------------------------------------------*/
+    /*Champ de recherche*/
+
+    #bouton_rechercher
     {
-        margin: 5px 0;
+        display: none;/*ajouté*/
+    }
+
+    #loupe_img
+    {
+        display: block;/*modifié none -> block*/
+    }
+
+    #champ_recherche
+    {
+        width: 100%;/*ajouté*/
+    }
+
+    /*------------------------------------------------*/
+    /*Aside populaires*/
+
+    .figure_populaires
+    {
+        width: 100%;/*modifié 42% -> 100%*/
+    }
+
+    /*------------------------------------------------*/
+    /*Section hébergements*/  
+
+    #section_hebergements
+    {
+        background-color: white;/*modifié #F2F2F2 -> white*/
+    }
+
+    #bloc_hebergements_img div
+    {
+        width: 100%;/*modifié 38% -> 100%*/
+    }
+
+    .img_bloc_hebergement
+    {
+        height: 150px;/*modifié 100px -> 150px*/
+    }
+
+    /*--------------------------------------*/
+    /*Section activités*/
+
+    #bloc_activites_img
+    {
+        flex-wrap: nowrap;/*modifié wrap -> nowrap*/
+        flex-direction: column;/*ajouté*/
+    }
+
+    .figure_activites
+    {
+        width: 100%;/*ajouté*/
+    }
+
+    .bloc_duo
+    {
+        flex-direction: column;/*ajouté*/
+        width: 100%;/*ajouté*/
+    }
+
+    .img_up_duo
+    {
+        margin-bottom: 10px;/*modifié 30px -> 10px*/
+    }
+
+    #bloc_3_activites
+    {
+        order: 3;/*modifié 4 -> 3*/
+        margin-bottom: 10px;/*ajouté*/
+    }
+
+    #bloc_4_activites
+    {
+        order: 4;/*modifié 3 -> 4*/
+    }
+
+    .all_img_activites, #pomegues, #frioul, #garde, #longchamp
+    {
+        height: 150px;/*modifié*/
+    }
+
+    /*--------------------------------------------------*/
+    /*Footer*/
+
+    footer
+    {
+        flex-direction: column;/*ajouté*/
+        justify-content: flex-start;/*modifié space-around -> flex-start*/
+    }
+
+    .nav_footer
+    {
+        width: auto;/*modifié 35% -> auto*/
+        margin-left: 10px;/*modifié 50px -> 10px*/
+        margin-bottom: 20px;/*ajouté*/
     }
 }
