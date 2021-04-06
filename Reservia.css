@@ -83,6 +83,7 @@ header ul
     font-weight: bold;
     padding-left: 30px;
     margin-right: 10px;
+    font-size: 12.8px;
 }
 
 /*--------------------------------------*/
@@ -598,35 +599,61 @@ footer
 
 @media all and (max-width: 642px)/*-----------------------------*/
 {
-    /*Nav position absolue a 642px*/
+    /*Nav header position*/
+
     header
     {
-        position: relative;/*ajouté*/
-        margin-bottom: 80px;/*ajouté*/
+        flex-wrap: wrap;/*ajouté*/
     }
+
+    #header_p_logo
+    {
+        width: 100%;/*ajouté*/
+    }
+
+    #bloc_nav_inscription
+    {
+        width: 100%;/*ajouté*/
+    }
+
     header nav
     {
-        position: absolute;/*ajouté*/
-        top: 40px;/*ajouté*/
-        left: -40px;/*ajouté*/
-        width: 642px;/*ajouté*/
+        width: 66%;/*ajouté*/
     }
-    header li
+
+    header li 
     {
-        width: 320px;/*ajouté*/
-        text-align: center;/*ajouté*/
+        width: 50%;/*ajouté*/
+        display: flex;/*ajouté*/
+        justify-content: center;/*ajouté*/
     }
+
     .main_nav
     {
-        margin: 0;/*modifié margin-right 15px -> 0*/
-        padding: 0 135px 25px 135px;/*modifié 25px 25px 0 20px -> 0 135px 25px 135px*/
+        margin-right: 0;/*modifié 15 -> 0*/
+        padding: 0 10px 20px 10px;/*modifié 25 25 0 20 -> 0 20 20 20*/
     }
+
     .main_nav:hover
     {
-        color: #0065FC;
-        border-top: none;
-        border-bottom: solid 2px #0065FC;
+        border-top: none;/*modifié none*/
+        border-bottom: solid 2px #0065FC;/*ajouté*/
     }
+
+    #header_p_inscription
+    {
+        width: 33%;/*ajouté*/
+        text-align: center;/*ajouté*/
+        padding-bottom: 20px;/*ajouté*/
+    }
+
+    #inscription
+    {
+        padding-left: 0;/*modifié 30 -> 0*/
+        margin-right: 0;/*modifié 10 -> 0*/
+        padding: 0 10px 0 10px;/*ajouté*/
+    }
+
     /*-----------------------------------------------*/
 
     /*-----------------------------------------------*/
@@ -640,14 +667,20 @@ footer
     /*------------------------------------------------*/
     /*Aside populaires*/
 
-    #bloc_populaires_img
+    .flex_img_figcaption_populaires
     {
-        flex-wrap: wrap;/*ajoute*/
+        flex-direction: column;/*modifié row -> column*/
     }
 
-    .figure_populaires
+    .img_bloc_populaires
     {
-        width: 42%;/*modifié 29% -> 42%*/
+        width: 100%;/*modifié 35% -> 100%*/
+        border-radius: 10px 10px 0 0;/*modifié*/
+    }
+
+    .bloc_legende_populaires
+    {
+        height: 80px;/*ajouté*/
     }
 
     /*------------------------------------------------*/
@@ -661,23 +694,7 @@ footer
 
 @media all and (max-width: 500px)
 {
-    /*Nav position absolue a 500px*/
-
-    header nav
-    {
-        left: -20px;/*modifié -40px -> -20px*/
-        width: 500px;/*modifié 642px -> 500px*/
-    }
-    header li
-    {
-        width: 250px;/*modifié 321px -> 250px*/
-    }
-    .main_nav
-    {
-        padding: 0 100px 25px 100px;/*modifié 0 135px 25px 135px -> 0 100px 25px 100px*/
-    }
-
-    /*--------------------------------------------------*/
+    /*-----------------------------------------------*/
 
     /*Modification des marges en vu de la version mobile*/
 
@@ -688,7 +705,7 @@ footer
 
     header
     {
-        margin: 10px 20px 80px 20px;
+        margin: 10px 20px 0px 20px;
     }
 
     #recherche_filtres
@@ -740,19 +757,56 @@ footer
 
 @media all and (max-width: 376px)
 {
-    /*Nav position absolue a 375px*/
+    /*Nav position absolue a 375px-------------------------*/
+
+    header
+    {
+        position: relative;/*ajouté*/
+        margin-bottom: 70px;/*ajouté*/
+        flex-wrap: nowrap;/*modifié wrap -> nowrap*/
+    }
+
+    #header_p_logo
+    {
+        width: auto;/*modifié 100% -> auto*/
+    }
+
+    #bloc_nav_inscription
+    {
+        width: auto;/*modifié 100% -> auto*/
+    }
 
     header nav
     {
-        width: 375px;/*modifié 500px -> 375px*/
+        position: absolute;/*ajouté*/
+        top: 50px;/*ajouté*/
+        left: -20px;/*ajouté*/
+        width: 375px;/*modifié 66% -> 375px*/
     }
+
     header li
     {
-        width: 187.5px;/*modifié 250px -> 187.5px*/
+        width: 187.5px;/*modifié 50% -> 187.5px*/
     }
+
     .main_nav
     {
-        padding: 0 70px 25px 70px;/*modifié 0 100px 25px 100px -> 0 70px 25px 70px*/
+        margin: 0;/*modifié margin-right 15px -> 0*/
+        padding: 0 70px 10px 70px;/*modifié 0 10px 20px 10px -> 0 70px 10px 70px*/
+    }
+
+    #header_p_inscription
+    {
+        width: auto;/*modifié 33% -> auto*/
+        text-align: center;/*ajouté*/
+        padding-bottom: 0;/*modifié 20px -> 0*/
+    }
+
+    #inscription
+    {
+        padding-left: 0;/*modifié 30 -> 0*/
+        margin-right: 0;/*modifié 10 -> 0*/
+        padding: 0;/*modifié 0 10 0 10 -> 0*/
     }
 
     /*---------------------------------------------------*/
@@ -776,9 +830,30 @@ footer
     /*------------------------------------------------*/
     /*Aside populaires*/
 
+    #bloc_populaires_img
+    {
+        flex-wrap: wrap;/*ajoute*/
+    } 
+
     .figure_populaires
     {
-        width: 100%;/*modifié 42% -> 100%*/
+        width: 100%;/*modifié 29% -> 100%*/
+    }
+
+    .flex_img_figcaption_populaires
+    {
+        flex-direction: row;/*modifié column -> row*/
+    }
+
+    .img_bloc_populaires
+    {
+        width: 35%;/*modifié 100% -> 35%*/
+        border-radius: 10px 0 0 10px;/*modifié*/
+    }
+
+    .bloc_legende_populaires
+    {
+        height: auto;/*modifié 80px -> auto*/
     }
 
     /*------------------------------------------------*/
@@ -854,5 +929,10 @@ footer
         width: auto;/*modifié 35% -> auto*/
         margin-left: 10px;/*modifié 50px -> 10px*/
         margin-bottom: 20px;/*ajouté*/
+    }
+
+    .nav_footer a
+    {
+        font-size: 12.8px;
     }
 }
