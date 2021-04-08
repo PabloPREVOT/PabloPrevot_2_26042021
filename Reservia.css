@@ -739,6 +739,19 @@ footer
     }
 
     /*---------------------------------------------------*/
+    /*Aside populaires*/
+
+    .figure_populaires
+    {
+        margin: 1%;/*modifié 10px -> 1%*/
+    }
+
+    .bloc_legende_populaires
+    {
+        height: 100px;/*modifié 80px -> 100px*/
+    }
+
+    /*---------------------------------------------------*/
     /*Footer*/
 
     footer
@@ -838,6 +851,7 @@ footer
     .figure_populaires
     {
         width: 100%;/*modifié 29% -> 100%*/
+        margin: 10px;/*modifié 1% -> 10px*/
     }
 
     .flex_img_figcaption_populaires
