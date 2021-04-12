@@ -338,7 +338,7 @@ figure
 
 #bloc_title_populaires_img i
 {
-    margin: 30px 20px 10px 0;
+    margin: 30px 25px 10px 0;
 }
 
 #bloc_populaires_img
@@ -749,6 +749,11 @@ footer
     .bloc_legende_populaires
     {
         height: 100px;/*modifié 80px -> 100px*/
+    }
+
+    #bloc_title_populaires_img i
+    {
+        margin: 30px 10px 10px 0;/*25px droite -> 10px*/
     }
 
     /*---------------------------------------------------*/
