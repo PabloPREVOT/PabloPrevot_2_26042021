@@ -17,6 +17,7 @@ h1, h2, h3, h4, a, p
 #bloc_page
 {
     margin: 0 40px 0 40px;
+ 
 }
 
 a
@@ -367,7 +368,7 @@ figure
 .img_bloc_populaires
 {
     width: 35%;
-    height: 115px;
+    height: 120px;
     border-radius: 10px 0 0 10px;
 }
 
@@ -377,6 +378,7 @@ figure
     flex-direction: column;
     justify-content: space-between;
     padding: 5px 10px;
+    width: 60%;
 }
 
 .bloc_legende_populaires h3, .bloc_legende_populaires p
@@ -680,7 +682,8 @@ footer
 
     .bloc_legende_populaires
     {
-        height: 80px;/*ajouté*/
+        height: 85px;/*ajouté*/
+        width: auto;/*modifié 60% -> auto (defaut)*/
     }
 
     /*------------------------------------------------*/
@@ -748,7 +751,7 @@ footer
 
     .bloc_legende_populaires
     {
-        height: 100px;/*modifié 80px -> 100px*/
+        height: 100px;/*modifié 85px -> 100px*/
     }
 
     #bloc_title_populaires_img i
